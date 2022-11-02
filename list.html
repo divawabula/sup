@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="assets/images/favicon.png" type="image/ico" />
+
+    <title> Sistem Informasi Akademik UMP </title>
+
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="assets/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="assets/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="assets/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="assets/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+            <center>
+            &nbsp; <a href="index.php" class="fa fa-mortar-board fa-2x" style="color:#fff;"><span><font size="4.95" color="white" face="Helvetica Neue">APLIKASI AKADEMIK</font></span></a>
+            </center>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="assets/images/image.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Fauzan Hilmi</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a href="index.php"><i class="fa fa-home"></i> Home <span class="fa fa-chevron"></span></a>
+                  </li>
+                  <li><a href="#"><i class="fa fa-desktop"></i> Data Mahasiswa <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.php?page=tampil_mhs">Tampil Data</a></li>
+                      <li><a href="index.php?page=tambah_mhs">Tambah Data</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-desktop"></i> Data Dosen <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="#">Tampil Data</a></li>
+                      <li><a href="#">Tambah Data</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-gear"></i> Settings <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="#">Settings 1</a></li>
+                      <li><a href="#">Settings 2</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings" href="#">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen" href="#">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock" href="#">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="#">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+              <nav class="nav navbar-nav">
+              <ul class=" navbar-right">
+                <li class="nav-item dropdown open" >
+                  <a href="#" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/images/image.jpg" alt="">Fauzan Hilmi
+                  </a>
+                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item"  href="#"> Profile</a>
+                      <a class="dropdown-item"  href="#">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    <a class="dropdown-item"  href="#"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content - HALAMAN UTAMA ISI DISINI -->
+        <div class="right_col" role="main">
+      
+
+	<div class="container" style="margin-top:20px">
+		<center><font size="6">Data Mahasiswa</font></center>
+		<hr>
+		<a href="index.php?page=tambah_mhs"><button class="btn btn-dark right">Tambah Data</button></a>
+		<div class="table-responsive">
+		<table class="table table-striped jambo_table bulk_action">
+			<thead>
+				<tr>
+					<th>NO.</th>
+					<th>NIM</th>
+					<th>Nama Mahasiswa</th>
+					<th>Jenis Kelamin</th>
+					<th>Program Studi</th>
+					<th>Aksi</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+						<tr>
+							<td>1</td>
+							<td>1803040008</td>
+							<td>Malik Azhar</td>
+							<td>Perempuan</td>
+							<td>Farmasi</td>
+							<td>
+								<a href="index.php?page=edit_mhs&Nim=1803040008" class="btn btn-secondary btn-sm">Edit</a>
+								<a href="delete.php?Nim=1803040008" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')">Delete</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>2</td>
+							<td>1803040007</td>
+							<td>Gani Maulana</td>
+							<td>Laki-Laki</td>
+							<td>Kedokteran</td>
+							<td>
+								<a href="index.php?page=edit_mhs&Nim=1803040007" class="btn btn-secondary btn-sm">Edit</a>
+								<a href="delete.php?Nim=1803040007" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')">Delete</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>3</td>
+							<td>1803040006</td>
+							<td>Luna Maya</td>
+							<td>Perempuan</td>
+							<td>Manajemen</td>
+							<td>
+								<a href="index.php?page=edit_mhs&Nim=1803040006" class="btn btn-secondary btn-sm">Edit</a>
+								<a href="delete.php?Nim=1803040006" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')">Delete</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>4</td>
+							<td>1803040005</td>
+							<td>Kimi Hime</td>
+							<td>Perempuan</td>
+							<td>Farmasi</td>
+							<td>
+								<a href="index.php?page=edit_mhs&Nim=1803040005" class="btn btn-secondary btn-sm">Edit</a>
+								<a href="delete.php?Nim=1803040005" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')">Delete</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>5</td>
+							<td>1803040004</td>
+							<td>Lori Kogawa</td>
+							<td>Perempuan</td>
+							<td>Manajemen</td>
+							<td>
+								<a href="index.php?page=edit_mhs&Nim=1803040004" class="btn btn-secondary btn-sm">Edit</a>
+								<a href="delete.php?Nim=1803040004" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')">Delete</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>6</td>
+							<td>1803040003</td>
+							<td>Dhoni Ari</td>
+							<td>Laki-Laki</td>
+							<td>Teknik Sipil</td>
+							<td>
+								<a href="index.php?page=edit_mhs&Nim=1803040003" class="btn btn-secondary btn-sm">Edit</a>
+								<a href="delete.php?Nim=1803040003" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')">Delete</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>7</td>
+							<td>1803040002</td>
+							<td>Samsul Rifai</td>
+							<td>Laki-Laki</td>
+							<td>Teknik Kimia</td>
+							<td>
+								<a href="index.php?page=edit_mhs&Nim=1803040002" class="btn btn-secondary btn-sm">Edit</a>
+								<a href="delete.php?Nim=1803040002" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')">Delete</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>8</td>
+							<td>1803040001</td>
+							<td>Arief Luqman</td>
+							<td>Laki-Laki</td>
+							<td>Teknik Informatika</td>
+							<td>
+								<a href="index.php?page=edit_mhs&Nim=1803040001" class="btn btn-secondary btn-sm">Edit</a>
+								<a href="delete.php?Nim=1803040001" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')">Delete</a>
+							</td>
+						</tr>
+									<tbody>
+		</table>
+	</div>
+	</div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Copyright @ 2020 Aplikasi Akademik : Fauzan Hilmi
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="assets/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="assets/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="assets/nprogress/nprogress.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="assets/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="assets/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="assets/skycons/skycons.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="assets/js/custom.min.js"></script>
+
+  </body>
+</html>
